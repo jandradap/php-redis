@@ -14,7 +14,6 @@ RUN apt-get install -y unzip \
 	php-curl \
 	jq \
 	php-redis \
-	supervisor
 
 #borro descargas
 RUN rm -rf /var/lib/apt/lists/*
