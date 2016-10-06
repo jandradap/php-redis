@@ -25,7 +25,7 @@ RUN rm -rf /var/www/html/index.html
 COPY index.php /var/www/html/index.php
 
 #exponemos puertos
-EXPOSE 80
+#EXPOSE 80
 
 #directorio de trabajo por defecto
 WORKDIR /var/www/html/
