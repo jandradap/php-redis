@@ -13,7 +13,8 @@ RUN apt-get install -y unzip \
 	php7.0-json \
 	php-curl \
 	jq \
-	php-redis
+	php-redis \
+	redis-tools
 
 #borro descargas
 RUN rm -rf /var/lib/apt/lists/*
