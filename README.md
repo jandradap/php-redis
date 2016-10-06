@@ -14,4 +14,5 @@
 	docker exec -it larp /bin/bash
 
 ### Backup BD
-	La base de datos está localizada en /var/lib/redis/dump.rdb
+
+La base de datos está localizada en /var/lib/redis/dump.rdb
