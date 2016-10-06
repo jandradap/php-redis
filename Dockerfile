@@ -21,20 +21,14 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /var/cache/apt/archives/*
 
 #Personalizamos apache2
-RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/log/supervisor
 RUN rm -rf /var/www/html/index.html
 COPY index.php /var/www/html/index.php
 
-#Copio la configuracion del supervisord
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-RUN chown root:root /etc/supervisor/conf.d/supervisord.conf
-
 #exponemos puertos
-EXPOSE 6379
 EXPOSE 80
 
 #directorio de trabajo por defecto
 WORKDIR /var/www/html/
 
-#Ejecuto el supervisor
-CMD ["/usr/bin/supervisord"]
+#Ejecuto apache2
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
