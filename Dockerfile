@@ -29,5 +29,10 @@ EXPOSE 80
 #directorio de trabajo por defecto
 WORKDIR /var/www/html/
 
+#variables de entorno
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
 #Ejecuto apache2 al inicio
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
