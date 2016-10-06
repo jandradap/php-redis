@@ -13,7 +13,7 @@ RUN apt-get install -y unzip \
 	php7.0-json \
 	php-curl \
 	jq \
-	php-redis \
+	php-redis
 
 #borro descargas
 RUN rm -rf /var/lib/apt/lists/*
@@ -29,5 +29,5 @@ EXPOSE 80
 #directorio de trabajo por defecto
 WORKDIR /var/www/html/
 
-#Ejecuto apache2
+#Ejecuto apache2 al inicio
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
