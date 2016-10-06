@@ -1,6 +1,6 @@
 # PHP-REDIS
 #### **Linux, Apache, PHP preparado para conectar con Redis.**
-
+[![](https://images.microbadger.com/badges/version/jorgeandrada/php-redis.svg)](https://microbadger.com/images/jorgeandrada/php-redis "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/jorgeandrada/php-redis.svg)](https://microbadger.com/images/jorgeandrada/php-redis "Get your own image badge on microbadger.com")
 
 ### Uso
 	docker pull jorgeandrada/php-redis
