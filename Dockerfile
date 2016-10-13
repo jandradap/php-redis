@@ -25,7 +25,7 @@ RUN rm -rf /var/www/html/index.html
 COPY index.php /var/www/html/index.php
 
 #Personalizamos zona horaria
-RUN echo Europe/Madrid >/etc/timezone && \
+RUN echo "Europe/Madrid" >/etc/timezone && \
 	dpkg-reconfigure -f noninteractive tzdata
 
 #exponemos puertos
